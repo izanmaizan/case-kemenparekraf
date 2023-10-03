@@ -1,0 +1,173 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0080FF, #00CFFF);
+    color: #FFF;
+}
+header {
+    background-color: rgba(0, 128, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #FFF;
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+.indented-paragraph {
+    text-indent: 20px; /* Menentukan jarak penjorokan dalam piksel */
+}
+article {
+    flex: 2;
+    margin-right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    color: #000;
+}
+aside {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    color: #000;
+}
+aside > img {
+    border-radius: 10px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+.social-media li {
+    margin-bottom: 10px;
+}
+.social-media li a {
+    display: flex;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+}
+.social-media li a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+footer {
+    background-color: rgba(0, 128, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    color: #FFF;
+}
+.dropdown:hover .dropdown-toggle {
+    background-color: #0080FF;
+    color: #FFF;
+    border-radius: 5px 5px 0 0;
+}
+.dropdown-toggle {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    transition: background-color 0.3s ease;
+}
+.dropdown-content a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+.dropdown-content a:hover {
+    background-color: #0080FF;
+    color: #FFF;
+    border-radius: 5px;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.jumbotron {
+    position: relative;
+    background-color: #fff;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #290000;
+    text-align: center;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    filter: blur(1px); /* Menambahkan efek blur dengan nilai 8px */
+}
+.slider-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    filter: blur(0); /* Menonaktifkan efek blur pada gambar slider */
+}
+.slider-image.active {
+    opacity: 1;
+}
